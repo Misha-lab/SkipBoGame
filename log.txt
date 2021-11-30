@@ -1,0 +1,22 @@
+2021.11.28  time  04:13:34 PM MSK: Game 0 created by Player0
+
+2021.11.28  time  04:13:34 PM MSK: Client Player0 join to game #0.
+
+2021.11.28  time  04:13:43 PM MSK: Client Player1 connected to the server.
+
+2021.11.28  time  04:13:45 PM MSK: Client Player1 join to game #0.
+
+2021.11.28  time  04:17:59 PM MSK: Client Player0 disconnected from the server.
+
+2021.11.28  time  04:18:01 PM MSK: Client Player1 disconnected from the server.
+
+2021.11.28  time  04:18:06 PM MSK: Client Player2 connected to the server.
+
+2021.11.28  time  04:20:34 PM MSK: Client Player2 disconnected from the server.
+
+2021.11.30  time  07:19:49 PM MSK: Client Player0 connected to the server.
+
+2021.11.30  time  07:19:53 PM MSK: Game 0 created by Player0
+
+2021.11.30  time  07:19:53 PM MSK: Client Player0 join to game #0.
+
