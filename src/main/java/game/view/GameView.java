@@ -95,7 +95,6 @@ public class GameView extends JPanel {
                                         ex.printStackTrace();
                                     }
                                 }
-
                             }
 
                             cards.addMouseListener(new MouseAdapter() {
@@ -135,33 +134,7 @@ public class GameView extends JPanel {
 
                             if (isContains) {
                                 storagePic[ind].setBounds(field[j].getX(), field[j].getY(), cardPic.getWidth(), cardPic.getHeight());
-                                isMade = current.makeMove("2" + ind + j, 10, client.game);
-                                if (!isMade) {
-                                    storagePic[ind].setBounds(startX, startY, cardPic.getWidth(), cardPic.getHeight());
-                                }
-                                client.getWriter().println("@serverGameState#" + client.game.toString() + "#" + current.allInfo());
-                                gameView();
-                                client.getWriter().println("@updateGameView");
-
-                                boolean isCleared = client.game.getBoard().clear12();
-                                if (isCleared) {
-                                    final Timer timer = new Timer(1000, new ActionListener() {
-                                        @Override
-                                        public void actionPerformed(ActionEvent e) {
-
-                                        }
-                                    });
-                                    timer.addActionListener(new ActionListener() {
-                                        @Override
-                                        public void actionPerformed(ActionEvent e) {
-                                            client.getWriter().println("@serverGameState#" + client.game.toString() + "#" + current.allInfo());
-                                            gameView();
-                                            client.getWriter().println("@updateGameView");
-                                            timer.stop();
-                                        }
-                                    });
-                                    timer.start();
-                                }
+								client.getWriter().println("@makeMove 2" + ind + "" + j + " 10");
                                 break;
                             }
                         }
@@ -207,46 +180,13 @@ public class GameView extends JPanel {
                             boolean isContainsField = cardLabel.getX() >= field[j].getX() && cardLabel.getX() <= field[j].getX() + field[j].getWidth() && cardLabel.getY() >= field[j].getY() && cardLabel.getY() <= field[j].getY() + field[j].getHeight();
                             if (isContainsField) {
                                 cardLabel.setBounds(field[j].getX(), field[j].getY(), cardPic.getWidth(), cardPic.getHeight());
-                                isMade = current.makeMove("3" + ind + j, 10, client.game);
-                                if (!isMade) {
-                                    cardLabel.setBounds(startX, startY, cardPic.getWidth(), cardPic.getHeight());
-                                }
-
-                                client.getWriter().println("@serverGameState#" + client.game.toString() + "#" + current.allInfo());
-                                gameView();
-                                client.getWriter().println("@updateGameView");
-
-                                boolean isCleared = client.game.getBoard().clear12();
-                                if (isCleared) {
-                                    final Timer timer = new Timer(1000, new ActionListener() {
-                                        @Override
-                                        public void actionPerformed(ActionEvent e) {
-
-                                        }
-                                    });
-                                    timer.addActionListener(new ActionListener() {
-                                        @Override
-                                        public void actionPerformed(ActionEvent e) {
-                                            client.getWriter().println("@serverGameState#" + client.game.toString() + "#" + current.allInfo());
-                                            gameView();
-                                            client.getWriter().println("@updateGameView");
-                                            timer.stop();
-                                        }
-                                    });
-                                    timer.start();
-                                }
+								client.getWriter().println("@makeMove 3" + ind + "" + j + " 10");
                                 break;
                             }
                             boolean isContainsStorage = cardLabel.getX() >= storagePic[j].getX() && cardLabel.getX() <= storagePic[j].getX() + storagePic[j].getWidth() && cardLabel.getY() >= storagePic[j].getY() && cardLabel.getY() <= storagePic[j].getY() + storagePic[j].getHeight();
                             if (isContainsStorage) {
                                 cardLabel.setBounds(storagePic[j].getX(), storagePic[j].getY(), cardPic.getWidth(), cardPic.getHeight());
-                                isMade = current.makeMove(ind + "" + j, 11, client.game);
-                                if (!isMade) {
-                                    cardLabel.setBounds(startX, startY, cardPic.getWidth(), cardPic.getHeight());
-                                }
-                                client.getWriter().println("@serverGameState#" + client.game.toString() + "#" + current.allInfo());
-                                gameView();
-                                client.getWriter().println("@updateGameView");
+								client.getWriter().println("@makeMove " + ind + "" + j + " 11");
                                 break;
                             }
                         }
@@ -294,44 +234,7 @@ public class GameView extends JPanel {
                         }
                         if (isContains) {
                             cardLabel.setBounds(field[j].getX(), field[j].getY(), cardPic.getWidth(), cardPic.getHeight());
-                            isMade = current.makeMove("1*" + j, 10, client.game);
-                            if (!isMade) {
-                                cardLabel.setBounds(startX, startY, cardPic.getWidth(), cardPic.getHeight());
-                            }
-                            client.game.updateGameStatus();
-                            if(client.game.getGameStatus() == Game.FINISHED) {
-                                client.getContentPane().removeAll();
-                                FinalView finalView = new FinalView(client, client.game.getPlayers());
-                                client.getContentPane().add(finalView);
-                                client.getContentPane().repaint();
-                                client.revalidate();
-                                client.getWriter().println("@setFinalViewAll");
-                            }
-                            else {
-                                client.getWriter().println("@serverGameState#" + client.game.toString() + "#" + current.allInfo());
-                                gameView();
-                                client.getWriter().println("@updateGameView");
-
-                                boolean isCleared = client.game.getBoard().clear12();
-                                if (isCleared) {
-                                    final Timer timer = new Timer(1000, new ActionListener() {
-                                        @Override
-                                        public void actionPerformed(ActionEvent e) {
-
-                                        }
-                                    });
-                                    timer.addActionListener(new ActionListener() {
-                                        @Override
-                                        public void actionPerformed(ActionEvent e) {
-                                            client.getWriter().println("@serverGameState#" + client.game.toString() + "#" + current.allInfo());
-                                            gameView();
-                                            client.getWriter().println("@updateGameView");
-                                            timer.stop();
-                                        }
-                                    });
-                                    timer.start();
-                                }
-                            }
+							client.getWriter().println("@makeMove 1*" + j + " 10");
                             break;
                         }
                     }

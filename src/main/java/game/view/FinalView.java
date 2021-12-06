@@ -53,10 +53,6 @@ public class FinalView extends JPanel {
                 players.set(minIdx, player);
             }
 
-            for (int i = 0; i < players.size(); i++) {
-                System.out.println(players.get(i).getMainCards().size() + "");
-            }
-
             JLabel result;
             if (players.get(0).getId() == client.getId()) {
                 result = new JLabel("YOU ARE WINNER!!!:)");

@@ -12,12 +12,10 @@ public class Game {
     private int xMove;
     private int gameStatus;
     private ArrayList<Player> players;
-    private ArrayList<Bot> bots;
 
     public Game(GameSettings settings) {
         this.settings = settings;
         this.players = new ArrayList<>();
-        this.bots = new ArrayList<>();
         xMove = (int) (Math.random() * settings.getPlayersCount());
         gameStatus = NOT_STARTED;
         board = new Board();
@@ -93,32 +91,17 @@ public class Game {
         this.players = players;
     }
 
-    public void setBots(ArrayList<Bot> bots) {
-        this.bots = bots;
-    }
 
     public ArrayList<Player> getPlayers() {
         return players;
-    }
-
-    public ArrayList<Bot> getBots() {
-        return bots;
     }
 
     public Player getPlayer(int i) {
         return players.get(i);
     }
 
-    public Bot getBot(int i) {
-        return bots.get(i);
-    }
-
     public void setPlayer(int i, Player player) {
         players.set(i, player);
-    }
-
-    public void setBot(int i, Bot bot) {
-        bots.set(i, bot);
     }
 
     public int getGameStatus() {

@@ -10,13 +10,11 @@ public class GameThread extends Thread {
     private String currentRequest = "";
 
     private ClientList clientsInGame;
-    //private ArrayList<Client> players;
     private int num;
     private Game game;
     private GameSettings gameSettings;
     public GameThread(GameSettings settings, int number) throws IOException {
         clientsInGame = new ClientList();
-        //players = new ArrayList<>();
         num = number;
         gameSettings = settings;
         game = new Game(settings);

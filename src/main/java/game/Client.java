@@ -22,12 +22,17 @@ public class Client extends JFrame {
     public int gamesCount = 0;
     public Game game;
     public boolean isUpdated = false;
+	
+	private ReaderThread readerThread;
 
     public String addr;
+	public int port;
 
-    public Client(String ip) {
+    public Client(String ip, int port) {
         super("SkipBo");
         addr = ip;
+		this.port = port;
+		
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         Dimension dimension = toolkit.getScreenSize();
         setBounds(0, 0, dimension.width, dimension.height);
@@ -47,13 +52,12 @@ public class Client extends JFrame {
         try {
             id = Server.playersCount();
             player = new Player(id);
-            socket = new Socket(addr, 9876);
+            socket = new Socket(addr, port);
 
             out = new PrintWriter(socket.getOutputStream(), true);
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
-
-            ReaderThread readerThread = new ReaderThread(in, this);
+            readerThread = new ReaderThread(in, this);
             readerThread.start();
         } catch (ConnectException ce) {
             ce.printStackTrace();
@@ -69,12 +73,16 @@ public class Client extends JFrame {
     }
 	
 	public void disconnectFromServer() {
-		try {
+		out.println("@quit");
+		readerThread.interrupt();
+		
+		/*try {
 			out.println("@quit");
+			readerThread.interrupt();
 			socket.close();
 		} catch (IOException ex) {
             ex.printStackTrace();
-        }
+        }*/
 	}
 
     public PrintWriter getWriter() {
@@ -99,11 +107,13 @@ public class Client extends JFrame {
 	}
 
     public static void main(String[] args) {
-        if (args.length > 0) {
-            new Client(args[0]);
-        } else {
-            new Client("192.168.100.18");
-        }
+		String ip = "192.168.100.18";
+		int port = 9876;
+        if (args.length == 2) {
+			ip = args[0];
+			port = Integer.parseInt(args[1]);
+		}
+		new Client(ip, port);
     }
 
     private static class ReaderThread extends Thread {
@@ -116,15 +126,16 @@ public class Client extends JFrame {
         }
 
         public void run() {
+			boolean needExit = false;
             String messageFromServer;
             try {
-                while (!client.getSocket().isClosed()) {
+                while (!needExit) {
                     messageFromServer = in.readLine();
                     if (messageFromServer.equals("")) {
                         continue;
-                    } else if (messageFromServer.equals("@fail")) {
+                    } /*else if (messageFromServer.equals("@fail")) {
                         System.out.println("Nickname already exist!\n Enter another Nickname!");
-                    } else if (messageFromServer.startsWith("@id")) {
+                    }*/ else if (messageFromServer.startsWith("@id")) {
                         String temp = messageFromServer.substring(3);
                         client.id = Integer.parseInt(temp);
                         client.name = "Player" + client.id;
@@ -133,8 +144,7 @@ public class Client extends JFrame {
                         client.game = new Game(parameters[1]);
                         client.player = new Player(parameters[2]);
                     } else if (messageFromServer.startsWith("@updateGameView")) {
-                        for (int i = 0; i < client.getContentPane().getComponentCount(); i++) {
-                            client.getWriter().println("updateGameState");
+                        for (int i = 0; i < client.getContentPane().getComponentCount(); i++) {  
                             ((GameView) client.getContentPane().getComponent(i)).gameView();
                             client.isUpdated = false;
                         }
@@ -160,6 +170,10 @@ public class Client extends JFrame {
                         client.getContentPane().repaint();
                         client.revalidate();
                     }
+					else if(messageFromServer.startsWith("@quit")) {
+						needExit = true;
+						client.getSocket().close();
+					}
                 }
             } catch (IOException ex) {
                 ex.printStackTrace();

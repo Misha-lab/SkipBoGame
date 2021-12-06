@@ -5,6 +5,10 @@ import game.io.Logger;
 
 import java.io.*;
 import java.net.Socket;
+import javax.swing.*;
+import javax.swing.event.MouseInputAdapter;
+import java.awt.*;
+import java.awt.event.*;
 
 public class ClientThread extends Thread {
     private Socket socket;
@@ -46,9 +50,60 @@ public class ClientThread extends Thread {
                 if(message.equals("")) {
                     continue;
                 }
-                else if(message.startsWith("@updateGameView")) {
-                    sendMessage(message);
-                }
+				else if(message.startsWith("@makeMove")) {
+					Game curGame = currentGameThread.getGame();
+					String[] temp = message.split(" ");
+					int m = 0;
+					for (; m < curGame.getPlayers().size(); m++) {
+						if(id == curGame.getPlayers().get(m).getId()) {
+							break;
+						}
+					}
+					final Player current = curGame.getPlayer(m);
+					boolean isMade = current.makeMove(temp[1], Integer.parseInt(temp[2]), curGame);
+					if(isMade) {
+						curGame.updateGameStatus();
+                        if(curGame.getGameStatus() == Game.FINISHED) {
+							out.println("@setFinalViewAll");
+                            sendMessage("@setFinalViewAll");
+							logger.toLog("Game " + currentGameThread.getNumber() + " has finished.");
+							player = null;
+							currentGameThread.interrupt();
+							games.remove(currentGameThread);
+							currentGameThread = null;
+                        }
+						else {
+							out.println("@updateGameState#" + currentGameThread.getGame().toString() + "#" + player.allInfo());
+							sendMessage("@updateGameState#" + currentGameThread.getGame().toString() + "#" + player.allInfo());
+							out.println("@updateGameView");
+							sendMessage("@updateGameView");
+							
+								boolean isCleared = curGame.getBoard().clear12();
+                                if (isCleared) {
+                                    final Timer timer = new Timer(1000, new ActionListener() {
+                                        @Override
+                                        public void actionPerformed(ActionEvent e) {
+
+                                        }
+                                    });
+                                    timer.addActionListener(new ActionListener() {
+                                        @Override
+                                        public void actionPerformed(ActionEvent e) {
+                                            out.println("@updateGameState#" + currentGameThread.getGame().toString() + "#" + player.allInfo());
+											sendMessage("@updateGameState#" + currentGameThread.getGame().toString() + "#" + player.allInfo());
+											out.println("@updateGameView");
+											sendMessage("@updateGameView");
+                                            timer.stop();
+                                        }
+                                    });
+                                    timer.start();
+                                }
+						}
+					}
+					else {
+						out.println("@updateGameView");
+					}
+				}
                 else if(message.startsWith("@createGame")) {
                     String temp = message.substring(12);
                     String[] parameters = temp.split(" ");
@@ -63,24 +118,9 @@ public class ClientThread extends Thread {
                     int num = Integer.parseInt(message.substring(12));
                     joinToGame(num);
                 }
-                else if(message.startsWith("@updateGameState")) {
-                    out.println("@updateGameState#" + currentGameThread.getGame().toString() + "#" + player.allInfo());
-                }
-                else if(message.startsWith("@serverGameState")) {
-                    String[] parameters = message.split("#");
-                    currentGameThread.setGame(new Game(parameters[1]));
-                    setPlayer(new Player(parameters[2]));
-                    sendMessage("@updateGameState#" + currentGameThread.getGame().toString() + "#" + player.allInfo());
-                }
-                else if(message.startsWith("@setFinalViewAll")) {
-                    sendMessage(message);
-                    player = null;
-                    currentGameThread.interrupt();
-                    games.remove(currentGameThread);
-                    currentGameThread = null;
-                }
 				else if(message.startsWith("@quit")) {
 					needExit = true;
+					out.println("@quit");
 					socket.close();
 					logger.toLog("Client " + userName + " disconnected from the server.");
 				}

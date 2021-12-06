@@ -1,0 +1,248 @@
+2021.11.28  time  04:13:34 PM MSK: Game 0 created by Player0
+
+2021.11.28  time  04:13:34 PM MSK: Client Player0 join to game #0.
+
+2021.11.28  time  04:13:43 PM MSK: Client Player1 connected to the server.
+
+2021.11.28  time  04:13:45 PM MSK: Client Player1 join to game #0.
+
+2021.11.28  time  04:17:59 PM MSK: Client Player0 disconnected from the server.
+
+2021.11.28  time  04:18:01 PM MSK: Client Player1 disconnected from the server.
+
+2021.11.28  time  04:18:06 PM MSK: Client Player2 connected to the server.
+
+2021.11.28  time  04:20:34 PM MSK: Client Player2 disconnected from the server.
+
+2021.11.30  time  07:19:49 PM MSK: Client Player0 connected to the server.
+
+2021.11.30  time  07:19:53 PM MSK: Game 0 created by Player0
+
+2021.11.30  time  07:19:53 PM MSK: Client Player0 join to game #0.
+
+2021.12.01  time  06:06:58 PM MSK: Client Player0 connected to the server.
+
+2021.12.01  time  06:07:04 PM MSK: Client Player0 disconnected from the server.
+
+2021.12.01  time  06:07:11 PM MSK: Client Player1 connected to the server.
+
+2021.12.01  time  06:07:13 PM MSK: Game 0 created by Player1
+
+2021.12.01  time  06:07:13 PM MSK: Client Player1 join to game #0.
+
+2021.12.01  time  06:07:15 PM MSK: Client Player2 connected to the server.
+
+2021.12.01  time  06:07:16 PM MSK: Client Player2 join to game #0.
+
+2021.12.01  time  06:10:17 PM MSK: Client Player1 disconnected from the server.
+
+2021.12.01  time  06:10:23 PM MSK: Client Player2 disconnected from the server.
+
+2021.12.04  time  12:30:34 AM MSK: Client Player0 connected to the server.
+
+2021.12.04  time  12:30:35 AM MSK: Game 0 created by Player0
+
+2021.12.04  time  12:30:35 AM MSK: Client Player0 join to game #0.
+
+2021.12.04  time  12:30:37 AM MSK: Client Player1 connected to the server.
+
+2021.12.04  time  12:30:38 AM MSK: Client Player1 join to game #0.
+
+2021.12.04  time  12:35:00 AM MSK: Client Player0 disconnected from the server.
+
+2021.12.04  time  12:35:03 AM MSK: Client Player1 disconnected from the server.
+
+2021.12.05  time  04:32:33 PM MSK: Client Player0 connected to the server.
+
+2021.12.05  time  04:34:44 PM MSK: Client Player1 connected to the server.
+
+2021.12.05  time  04:34:47 PM MSK: Game 0 created by Player1
+
+2021.12.05  time  04:34:47 PM MSK: Client Player1 join to game #0.
+
+2021.12.05  time  04:34:49 PM MSK: Client Player2 connected to the server.
+
+2021.12.05  time  04:35:07 PM MSK: Game 1 created by Player0
+
+2021.12.05  time  04:35:07 PM MSK: Client Player0 join to game #1.
+
+2021.12.05  time  04:35:34 PM MSK: Client Player3 connected to the server.
+
+2021.12.05  time  04:36:02 PM MSK: Game 2 created by Player3
+
+2021.12.05  time  04:36:02 PM MSK: Client Player3 join to game #2.
+
+2021.12.05  time  04:36:15 PM MSK: Client Player4 connected to the server.
+
+2021.12.05  time  04:36:17 PM MSK: Game 3 created by Player4
+
+2021.12.05  time  04:36:17 PM MSK: Client Player4 join to game #3.
+
+2021.12.05  time  04:36:46 PM MSK: Client Player2 join to game #3.
+
+2021.12.05  time  04:41:28 PM MSK: Client Player4 disconnected from the server.
+
+2021.12.05  time  04:41:51 PM MSK: Client Player2 disconnected from the server.
+
+2021.12.05  time  05:01:39 PM MSK: Client Player5 connected to the server.
+
+2021.12.05  time  05:24:52 PM MSK: Client Player5 disconnected from the server.
+
+2021.12.05  time  05:24:54 PM MSK: Client Player6 connected to the server.
+
+2021.12.05  time  05:39:12 PM MSK: Client Player6 disconnected from the server.
+
+2021.12.05  time  06:00:46 PM MSK: Client Player7 connected to the server.
+
+2021.12.05  time  06:00:50 PM MSK: Client Player7 disconnected from the server.
+
+2021.12.05  time  06:00:51 PM MSK: Client Player8 connected to the server.
+
+2021.12.05  time  06:00:58 PM MSK: Client Player8 disconnected from the server.
+
+2021.12.05  time  06:02:47 PM MSK: Client Player9 connected to the server.
+
+2021.12.05  time  06:03:16 PM MSK: Client Player9 join to game #2.
+
+2021.12.05  time  06:03:43 PM MSK: Client Player10 connected to the server.
+
+2021.12.05  time  11:58:34 PM MSK: Server started.
+
+2021.12.05  time  11:58:58 PM MSK: Client Player0 connected to the server.
+
+2021.12.05  time  11:59:00 PM MSK: Game 0 created by Player0
+
+2021.12.05  time  11:59:00 PM MSK: Client Player0 join to game #0.
+
+2021.12.05  time  11:59:26 PM MSK: Client Player1 connected to the server.
+
+2021.12.05  time  11:59:27 PM MSK: Client Player1 join to game #0.
+
+2021.12.06  time  12:04:40 AM MSK: Game 0 has finished.
+
+2021.12.06  time  12:04:47 AM MSK: Client Player0 disconnected from the server.
+
+2021.12.06  time  12:09:47 AM MSK: Server started.
+
+2021.12.06  time  12:10:04 AM MSK: Client Player0 connected to the server.
+
+2021.12.06  time  12:10:06 AM MSK: Client Player0 disconnected from the server.
+
+2021.12.06  time  12:17:45 AM MSK: Server started.
+
+2021.12.06  time  12:18:01 AM MSK: Client Player0 connected to the server.
+
+2021.12.06  time  12:18:03 AM MSK: Game 0 created by Player0
+
+2021.12.06  time  12:18:03 AM MSK: Client Player0 join to game #0.
+
+2021.12.06  time  12:18:04 AM MSK: Client Player1 connected to the server.
+
+2021.12.06  time  12:18:06 AM MSK: Client Player1 join to game #0.
+
+2021.12.06  time  12:19:28 AM MSK: Game 0 has finished.
+
+2021.12.06  time  12:19:47 AM MSK: Client Player0 disconnected from the server.
+
+2021.12.06  time  12:20:00 AM MSK: Client Player1 disconnected from the server.
+
+2021.12.06  time  12:20:08 AM MSK: Client Player2 connected to the server.
+
+2021.12.06  time  12:20:39 AM MSK: Game 0 created by Player2
+
+2021.12.06  time  12:20:39 AM MSK: Client Player2 join to game #0.
+
+2021.12.06  time  12:20:44 AM MSK: Client Player3 connected to the server.
+
+2021.12.06  time  12:20:45 AM MSK: Client Player3 disconnected from the server.
+
+2021.12.06  time  12:21:56 AM MSK: Client Player4 connected to the server.
+
+2021.12.06  time  12:22:01 AM MSK: Client Player4 disconnected from the server.
+
+2021.12.06  time  12:26:56 AM MSK: Server started.
+
+2021.12.06  time  12:27:11 AM MSK: Client Player0 connected to the server.
+
+2021.12.06  time  12:27:11 AM MSK: Client Player0 disconnected from the server.
+
+2021.12.06  time  12:27:16 AM MSK: Client Player1 connected to the server.
+
+2021.12.06  time  12:27:20 AM MSK: Client Player1 disconnected from the server.
+
+2021.12.06  time  12:27:25 AM MSK: Client Player2 connected to the server.
+
+2021.12.06  time  12:27:27 AM MSK: Client Player2 disconnected from the server.
+
+2021.12.06  time  12:27:30 AM MSK: Client Player3 connected to the server.
+
+2021.12.06  time  12:27:31 AM MSK: Game 0 created by Player3
+
+2021.12.06  time  12:27:31 AM MSK: Client Player3 join to game #0.
+
+2021.12.06  time  12:27:44 AM MSK: Client Player4 connected to the server.
+
+2021.12.06  time  12:27:45 AM MSK: Client Player4 disconnected from the server.
+
+2021.12.06  time  12:27:47 AM MSK: Client Player5 connected to the server.
+
+2021.12.06  time  12:27:49 AM MSK: Client Player5 join to game #0.
+
+2021.12.06  time  12:30:22 AM MSK: Game 0 has finished.
+
+2021.12.06  time  12:30:27 AM MSK: Client Player3 disconnected from the server.
+
+2021.12.06  time  12:30:30 AM MSK: Client Player5 disconnected from the server.
+
+2021.12.06  time  12:51:28 AM MSK: Server started.
+
+2021.12.06  time  12:52:05 AM MSK: Client Player0 connected to the server.
+
+2021.12.06  time  12:52:07 AM MSK: Game 0 created by Player0
+
+2021.12.06  time  12:52:07 AM MSK: Client Player0 join to game #0.
+
+2021.12.06  time  12:52:09 AM MSK: Client Player1 connected to the server.
+
+2021.12.06  time  12:52:10 AM MSK: Client Player1 join to game #0.
+
+2021.12.06  time  12:52:12 AM MSK: Client Player2 connected to the server.
+
+2021.12.06  time  12:52:13 AM MSK: Client Player2 join to game #0.
+
+2021.12.06  time  12:53:51 AM MSK: Server started.
+
+2021.12.06  time  12:54:05 AM MSK: Client Player0 connected to the server.
+
+2021.12.06  time  12:54:06 AM MSK: Game 0 created by Player0
+
+2021.12.06  time  12:54:06 AM MSK: Client Player0 join to game #0.
+
+2021.12.06  time  12:54:14 AM MSK: Client Player1 connected to the server.
+
+2021.12.06  time  12:54:16 AM MSK: Game 1 created by Player1
+
+2021.12.06  time  12:54:16 AM MSK: Client Player1 join to game #1.
+
+2021.12.06  time  12:54:38 AM MSK: Client Player2 connected to the server.
+
+2021.12.06  time  12:54:39 AM MSK: Client Player2 join to game #0.
+
+2021.12.06  time  12:57:08 AM MSK: Game 0 has finished.
+
+2021.12.06  time  12:57:16 AM MSK: Client Player0 disconnected from the server.
+
+2021.12.06  time  12:57:19 AM MSK: Client Player2 disconnected from the server.
+
+2021.12.06  time  12:57:20 AM MSK: Client Player3 connected to the server.
+
+2021.12.06  time  12:57:23 AM MSK: Game 1 created by Player3
+
+2021.12.06  time  12:57:23 AM MSK: Client Player3 join to game #1.
+
+2021.12.06  time  12:59:47 AM MSK: Game 1 has finished.
+
+2021.12.06  time  12:59:52 AM MSK: Client Player1 disconnected from the server.
+
+2021.12.06  time  01:02:04 AM MSK: Client Player3 disconnected from the server.
+
