@@ -1,5 +1,0 @@
-//Сервер
-java -cp target\SkipBo-1.0-SNAPSHOT.jar game.Server 9876 (Порт можно не указывать, по умолчанию 9876)
-
-//Клиент
-java -cp target\SkipBo-1.0-SNAPSHOT.jar game.Client 127.0.0.1 9876

@@ -246,3 +246,25 @@
 
 2021.12.06  time  01:02:04 AM MSK: Client Player3 disconnected from the server.
 
+2022.09.26  time  07:14:13 PM MSK: Server started.
+
+2022.09.26  time  07:15:45 PM MSK: Client Player0 connected to the server.
+
+2022.09.26  time  07:16:01 PM MSK: Game 0 created by Player0
+
+2022.09.26  time  07:16:01 PM MSK: Client Player0 join to game #0.
+
+2022.09.26  time  07:16:06 PM MSK: Client Player1 connected to the server.
+
+2022.09.26  time  07:16:09 PM MSK: Client Player1 join to game #0.
+
+2023.07.02  time  08:04:48 PM MSK: Server started.
+
+2023.07.02  time  08:05:17 PM MSK: Client Player0 connected to the server.
+
+2023.07.02  time  08:05:23 PM MSK: Game 0 created by Player0
+
+2023.07.02  time  08:05:23 PM MSK: Client Player0 join to game #0.
+
+2023.07.02  time  08:07:17 PM MSK: Server started.
+
