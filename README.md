@@ -1,7 +1,7 @@
 # SkipBoGame
 Сетевая игра SkipBo на сокетах (TCP)
 
-Используемые технологии: Java Core, Java Swing
+Используемые технологии: Java Core, Java Swing, Maven
 
 Команды для запуска:
 
